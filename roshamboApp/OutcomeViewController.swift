@@ -35,10 +35,7 @@ class OutcomeViewController: UIViewController {
                 print(compValue)
                 let winner = determineWinner(userValue: userValue, compValue: compValue)
                 self.outputLabel.text = winner.1
-                //print(winner.0)
-                //print(type(of: winner.0))
-                //self.resultImage.image = UIImage(named: winner.0)
-                self.resultImage.image = UIImage(named: "RockCrushesScissors")
+                self.resultImage.image = UIImage(named: winner.0)
                 self.resultImage.alpha = 1.0
             }
         } else {
