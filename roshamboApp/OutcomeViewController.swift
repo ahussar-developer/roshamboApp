@@ -30,12 +30,19 @@ class OutcomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if let userValue = self.userValue{
+            print(userValue)
             if let compValue = self.compValue{
+                print(compValue)
                 let winner = determineWinner(userValue: userValue, compValue: compValue)
                 self.outputLabel.text = winner.1
-                print(winner.0)
-                self.resultImage.image = UIImage(named: "d\(winner.0)")
+                //print(winner.0)
+                //print(type(of: winner.0))
+                //self.resultImage.image = UIImage(named: winner.0)
+                self.resultImage.image = UIImage(named: "RockCrushesScissors")
+                self.resultImage.alpha = 1.0
             }
+        } else {
+            self.resultImage.image = nil
         }
         
         self.resultImage.alpha = 0
