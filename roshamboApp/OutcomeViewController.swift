@@ -45,7 +45,6 @@ class OutcomeViewController: UIViewController {
             self.resultImage.image = nil
         }
         
-        self.resultImage.alpha = 0
     }
     
     func determineWinner(userValue: Int, compValue: Int) -> (String, String) {
